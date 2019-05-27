@@ -76,12 +76,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Khoa\Desktop\Game\Game;C:\Users\Khoa\Desktop\Game\Game\include;C:\Users\Khoa\Desktop\Game\Game\src;D:\SFML-2.5.1\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>D:\SFML-2.5.1\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Khoa\Desktop\Game\Game;C:\Users\Khoa\Desktop\Game\Game\include;C:\Users\Khoa\Desktop\Game\Game\src;D:\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -100,11 +100,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Users\Khoa\Desktop\Game\Game;C:\Users\Khoa\Desktop\Game\Game\include;C:\Users\Khoa\Desktop\Game\Game\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-system.lib;sfml-main.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Khoa\Desktop\Game\Game;C:\Users\Khoa\Desktop\Game\Game\include;C:\Users\Khoa\Desktop\Game\Game\src;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -122,10 +125,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Ball.cpp" />
+    <ClCompile Include="SFMLSoundProvider.cpp" />
+    <ClCompile Include="src\AiPaddle.cpp" />
+    <ClCompile Include="src\MainMenu.cpp" />
+    <ClCompile Include="src\Object.cpp" />
+    <ClCompile Include="src\GameManager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ObjectsManager.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\ServiceLocator.cpp" />
+    <ClCompile Include="src\SoundFileCache.cpp" />
+    <ClCompile Include="src\SplashScreen.cpp" />
+    <ClCompile Include="src\stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AiPaddle.h" />
+    <ClInclude Include="include\Ball.h" />
+    <ClInclude Include="include\GameManager.h" />
+    <ClInclude Include="include\IAudioProvider.h" />
+    <ClInclude Include="include\MainMenu.h" />
+    <ClInclude Include="include\Object.h" />
+    <ClInclude Include="include\ObjectsManager.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\ServiceLocator.h" />
+    <ClInclude Include="include\SFMLSoundProvider.h" />
+    <ClInclude Include="include\SoundFileCache.h" />
+    <ClInclude Include="include\SplashScreen.h" />
+    <ClInclude Include="include\stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\ball.png" />
+    <Image Include="images\mainmenu.png" />
+    <Image Include="images\paddle.png" />
+    <Image Include="images\Splashscreen.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

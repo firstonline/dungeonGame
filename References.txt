@@ -1,0 +1,4 @@
+https://www.gamefromscratch.com/page/SFML-CPP-Tutorial-Series.aspx
+https://www.gamefromscratch.com/page/Game-From-Scratch-CPP-Edition.aspx
+https://www.gamefromscratch.com/post/2015/09/14/A-Closer-Look-at-SFML.aspx
+Book: "Procedural Content Generation for C++ Game Development"
